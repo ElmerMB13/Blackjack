@@ -10,20 +10,12 @@ namespace Blackjack {
 
         public Player(string name) : base(name) { }
 
-        public bool RequestCard() {
-            var answer = "";
-            Console.WriteLine("{0} Would you like one more card? (Y/N): ", m_name);
-            answer = Console.ReadLine();
-
-            return (answer == "y" || answer == "Y");
-        }
-
         public void Win() {
             Console.WriteLine("{0} wins", m_name);
         }
 
-        public void Lost() {
-            Console.WriteLine("{0} lost", m_name);
+        public void Loses() {
+            Console.WriteLine("{0} loses", m_name);
         }
 
         public void Push() {

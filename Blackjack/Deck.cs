@@ -42,7 +42,7 @@ namespace Blackjack {
             //std::random_shuffle(m_cartas.begin(), m_cartas.end());
         }
 
-        public void ExtraCard(Player p) {
+        public void ExtraCard(GenericPlayer p) {
             Console.WriteLine();
 
             while (!(p.Over21()) && p.RequestCard()) {
