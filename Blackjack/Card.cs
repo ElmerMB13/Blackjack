@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Blackjack
 {
-    class Card
+    public class Card
     {
-        public enum Range { AS = 1, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, JACK, QEEN, KING };
+        public enum Range { AS = 1, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, JACK = 10, QEEN = 10, KING = 10 };
         public enum Stick { CLUBS, DIAMONDS, HEARTS, SPADES };
 
         private Range m_range;
@@ -26,18 +26,9 @@ namespace Blackjack
         {
             int cardValue = 0;
 
-            if (m_upCard)
-            {
-                cardValue = Convert.ToInt32(m_range);
-
-                if (cardValue > 10)
-                {
-                    cardValue = 10;
-                }
-            }
+            if (m_upCard) cardValue = Convert.ToInt32(m_range);
 
             return cardValue;
         }
     }
-
 }
