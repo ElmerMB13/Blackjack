@@ -4,21 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Blackjack
-{
-    public class GenericPlayer : Hand
-    {
+namespace Blackjack {
+
+    public class GenericPlayer : Hand {
+
         protected string m_name;
 
         public GenericPlayer(string name) {
             m_name = name;
         }
 
-        public bool over21() {
+        public bool Over21() {
             return (GetTotal() > 21);
         }
 
-        public void lose() {
+        public void Lose() {
             Console.WriteLine(" Player {0} exceeded 21", m_name);
         }
     }
