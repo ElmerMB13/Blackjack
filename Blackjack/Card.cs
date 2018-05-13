@@ -39,4 +39,5 @@ namespace Blackjack
             return cardValue;
         }
     }
+
 }
