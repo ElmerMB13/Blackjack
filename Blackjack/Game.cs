@@ -16,6 +16,8 @@ namespace Blackjack {
         public Game(List<string> names) {
 
             m_players = new List<Player>();
+            m_deck = new Deck();
+            m_house = new House();
 
             foreach (var name in names) {
                 m_players.Add(new Player(name));
@@ -49,10 +51,10 @@ namespace Blackjack {
             m_house.FlipFirst();
             foreach (var player in m_players) {
 
-                Console.WriteLine(player.ToString());
+                player.PrintGPlayer();
             }
 
-            Console.WriteLine(m_house.ToString());
+            m_house.PrintGPlayer();
 
             OneMoreCard();
         }
@@ -65,7 +67,7 @@ namespace Blackjack {
             }
 
             m_house.FlipFirst();
-            Console.WriteLine(m_house.ToString());
+            m_house.PrintGPlayer();
             m_deck.ExtraCard(m_house);
 
             VerifyWinner();

@@ -33,5 +33,13 @@ namespace Blackjack {
             m_upCard = !(m_upCard);
         }
 
+        public void PrintCard(Card c) {
+            if (c.m_upCard) {
+                Console.WriteLine(c.m_range);
+                Console.WriteLine(c.m_stick);
+            }
+            else
+                Console.WriteLine("XX");
+        }
     }
 }

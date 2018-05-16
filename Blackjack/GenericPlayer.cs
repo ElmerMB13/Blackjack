@@ -24,10 +24,26 @@ namespace Blackjack {
 
         public bool RequestCard() {
             var answer = "";
-            Console.WriteLine("{0} Would you like one more card? (Y/N): ", m_name);
+            Console.WriteLine("{0} Would you like a card? (Y/N): ", m_name);
             answer = Console.ReadLine();
 
             return (answer == "y" || answer == "Y");
+        }
+
+        public void PrintGPlayer() {
+
+            Console.WriteLine(m_name);
+
+            if (_cards.Count() != 0) {
+                foreach (var card in _cards) {
+                    //Console.WriteLine(card);//.ToString()
+                    card.PrintCard(card);
+                }
+                if (GetTotal() != 0)
+                    Console.WriteLine(GetTotal());
+            }
+            else
+                Console.WriteLine("Empty");
         }
     }
 }

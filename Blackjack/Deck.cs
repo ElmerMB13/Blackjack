@@ -47,8 +47,7 @@ namespace Blackjack {
 
             while (!(p.Over21()) && p.RequestCard()) {
                 GiveCard(p);
-                Console.WriteLine(p.ToString());
-
+                p.PrintGPlayer();
                 if (p.Over21()) p.Lost();
             }
         }

@@ -8,7 +8,7 @@ namespace Blackjack {
 
     public class House : GenericPlayer {
 
-        public House(string name) : base(name) { }
+        public House(string name = "House") : base(name) { }
         
         public bool RequestCard() {
             return (GetTotal() <= 16);
@@ -16,7 +16,7 @@ namespace Blackjack {
 
         public void FlipFirst() {
             if (_cards.Count() != 0)
-                _cards[10].Flip();
+                _cards[0].Flip();
             else
                 Console.WriteLine("There are no cards to flip. ");
         }
