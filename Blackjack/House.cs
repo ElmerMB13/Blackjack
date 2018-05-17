@@ -10,7 +10,7 @@ namespace Blackjack {
 
         public House(string name = "House") : base(name) { }
         
-        public bool RequestCard() {
+        public override bool RequestCard() {
             return (GetTotal() <= 16);
         }
 

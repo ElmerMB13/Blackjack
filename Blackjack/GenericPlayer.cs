@@ -22,7 +22,7 @@ namespace Blackjack {
             Console.WriteLine(" Player {0} exceeded 21", m_name);
         }
 
-        public bool RequestCard() {
+        public virtual bool RequestCard() {
             var answer = "";
             Console.WriteLine("{0} Would you like a card? (Y/N): ", m_name);
             answer = Console.ReadLine();
@@ -36,7 +36,6 @@ namespace Blackjack {
 
             if (_cards.Count() != 0) {
                 foreach (var card in _cards) {
-                    //Console.WriteLine(card);//.ToString()
                     card.PrintCard(card);
                 }
                 if (GetTotal() != 0)

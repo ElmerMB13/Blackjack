@@ -35,7 +35,7 @@ namespace Blackjack {
 
         public void BeginGame() {
 
-            for (int i = 0; i < 2; ++i) {
+            for (int i = 0; i < 2; ++i) {//initially assigns 2 cards to each player and the House
 
                 foreach (var player in m_players) {
 
